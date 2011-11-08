@@ -1,0 +1,95 @@
+// This must be compiled after it is edited, for more information, see
+// http://www.sass-lang.org
+
+$base-color: #386AA9;
+$color-light: #444;
+$complement: #777;
+
+$list-header-bg-color: #ccc;
+$list-header-color: #777;
+
+$include-default-icons: false;
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+// @include sencha-tabs; // We create a custom tab style below
+@include sencha-toolbar;
+// @include sencha-carousel;
+// @include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+@include pictos-iconmask('home');
+@include pictos-iconmask('settings');
+@include pictos-iconmask('refresh');
+
+.start-screen {
+  background-color: #ccc;
+}
+
+.x-toolbar .x-toolbar-title {
+  font-weight: normal;
+}
+
+.x-tabbar {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #666;
+  @include display-box;
+  @include box-orient(horizontal);
+  
+  .x-tab {
+    border: 1px;
+    @include box-flex(1);
+    padding: .4em;
+    border: 1px solid #eee;
+    border-bottom-color: #ddd;
+    text-align: center;
+    @include background-gradient(#bbb);
+    @include bevel-text('light');
+    span {
+      font-weight: bold;
+      font-size: .9em;
+    }
+    &:first-child {
+      border-right: 1px solid #ccc;
+    }
+    &:last-child {
+      border-left: 1px solid #ccc;
+    }
+    &.x-tab-active {
+      @include background-gradient(#999, 'recessed');
+      border: 1px solid  #777;
+      border-bottom-color: #999;
+    }
+  }
+}
+
+.x-html {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;  
+  
+  h3 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+.x-button a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.x-panel-body {
+
+}
+

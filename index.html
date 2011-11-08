@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DalMob</title>
+    
+    <link rel="stylesheet" href="/css/dalmob.css" type="text/css">
+
+    <!-- Sencha -->
+    <script type="text/javascript" src="/js/sencha-touch.js"></script>
+
+    <!-- Main -->
+    <script type="text/javascript" src="/js/index.js"></script>    
+
+    <!-- Models -->
+    <script type="text/javascript" src="/js/model/Member.js"></script>
+
+    <!-- Stores -->
+    <script type="text/javascript" src="/js/store/Members.js"></script>
+    
+    <!-- Views -->
+    <script type="text/javascript" src="/js/view/Toolbar.js"></script>
+    <script type="text/javascript" src="/js/view/App.js"></script>
+    <script type="text/javascript" src="/js/view/MemberList.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="/js/controller/DalMob.js"></script>
+</head>
+<body>
+<script>
+	Ext.ns('DalMob', 'DalMob.views', 'DalMob.stores', 'DalMob.controllers');
+
+	if(typeof console === "undefined") {
+		console = { log: function() { } };
+	}
+
+	Ext.setup({
+	    phoneStartupScreen: 'startup.png',
+	    icon: 'icon.png',
+	    glossOnIcon: false,
+	    
+	    onReady: function() {
+		var app = new DalMob.App();
+	    }
+	});
+</script>
+</body>
+</html>
